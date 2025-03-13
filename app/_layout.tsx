@@ -21,12 +21,12 @@ const Layout = () => {
     }, [fontsLoaded, error])
 
     if (!fontsLoaded && !error) {
-        return null
+        return null 
     }
 
     return (
-        <Stack screenOptions={{headerShown:false}}>
-            <Stack.Screen name="index" options={{headerShown:false}}/>
+        <Stack screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="index"  />
         </Stack>
     )
 }

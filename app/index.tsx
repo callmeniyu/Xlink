@@ -36,12 +36,8 @@ const index = () => {
             </View>
 
             {/* Role Selection Buttons */}
-            <View className="mt-8 w-full px-10">
-                <TouchableOpacity className="bg-primarydark py-4 rounded-xl mb-4 w-full">
-                    <Text className="text-white text-center text-xl" style={{ fontFamily: "poppinsMedium" }}>
-                        Driver
-                    </Text>
-                </TouchableOpacity>
+            <View className="mt-8 w-full px-10 gap-4">
+                <CustomButton onPress={()=>router.push("/(screens)/(admin)/login/login")} text="Driver"/>
                 <CustomButton onPress={()=>router.push("/login/login")} text="User"/>
             </View>
         </SafeAreaView>
