@@ -1,41 +1,61 @@
 {
-  "expo": {
-    "name": "xlink",
-    "slug": "xlink",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/images/logo.png",
-    "scheme": "myapp",
-    "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
-    },
-    "web": {
-      "bundler": "metro",
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
-    },
-    "plugins": [
-      "expo-router",
-      [
-        "expo-splash-screen",
-        {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+    "expo": {
+        "name": "xlink",
+        "slug": "xlink",
+        "version": "1.0.0",
+        "orientation": "portrait",
+        "icon": "./assets/images/logo.png",
+        "scheme": "myapp",
+        "userInterfaceStyle": "automatic",
+        "newArchEnabled": true,
+        "extra": {
+            "eas": {
+                "projectId": "fabled-coder-454006-p5"
+            }
+        },
+        "ios": {
+            "supportsTablet": true,
+            "config": {
+                "googleMapsApiKey": "AIzaSyBPlIWzKuYyJgGXZwqau5Xwd0KuPDvX83w"
+            }
+        },
+        "android": {
+            "adaptiveIcon": {
+                "foregroundImage": "./assets/images/adaptive-icon.png",
+                "backgroundColor": "#ffffff"
+            },
+            "permissions": ["ACCESS_FINE_LOCATION", "ACCESS_COARSE_LOCATION"],
+            "config": {
+                "googleMaps": {
+                    "apiKey": "AIzaSyBPlIWzKuYyJgGXZwqau5Xwd0KuPDvX83w"
+                }
+            }
+        },
+        "web": {
+            "bundler": "metro",
+            "output": "static",
+            "favicon": "./assets/images/favicon.png"
+        },
+        "plugins": [
+            "expo-router",
+            [
+                "expo-location",
+                {
+                    "locationAlwaysAndWhenInUseUsageDescription": "This app needs access to your location to show nearby shuttles."
+                }
+            ],
+            [
+                "expo-splash-screen",
+                {
+                    "image": "./assets/images/splash-icon.png",
+                    "imageWidth": 200,
+                    "resizeMode": "contain",
+                    "backgroundColor": "#ffffff"
+                }
+            ]
+        ],
+        "experiments": {
+            "typedRoutes": true
         }
-      ]
-    ],
-    "experiments": {
-      "typedRoutes": true
     }
-  }
 }

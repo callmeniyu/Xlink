@@ -37,8 +37,8 @@ const index = () => {
 
             {/* Role Selection Buttons */}
             <View className="mt-8 w-full px-10 gap-4">
-                <CustomButton onPress={()=>router.push("/(screens)/(admin)/login/login")} text="Driver"/>
-                <CustomButton onPress={()=>router.push("/login/login")} text="User"/>
+                <CustomButton onPress={()=>router.push("/(screens)/driver/login/login")} text="Driver"/>
+                <CustomButton onPress={()=>router.push("/(screens)/user/login/login")} text="User"/>
             </View>
         </SafeAreaView>
     )

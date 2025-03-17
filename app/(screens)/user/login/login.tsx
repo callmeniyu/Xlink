@@ -16,7 +16,7 @@ const login = () => {
                     placeholder="Enter username"
                     placeholderTextColor="gray"
                 />
-                <CustomButton text="Login" onPress={() => router.push("/(screens)/home")} customStyles="w-full" />
+                <CustomButton text="Login" onPress={() => router.push("/(screens)/user/home")} customStyles="w-full" />
             </View>
         </SafeAreaView>
     )
